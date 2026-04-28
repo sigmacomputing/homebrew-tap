@@ -1,25 +1,25 @@
 class Sigcli < Formula
   desc "CLI for the Sigma Computing REST API"
   homepage "https://github.com/sigmacomputing/cli"
-  version "0.0.9"
+  version "0.0.11"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/sigmacomputing/cli/releases/download/v0.0.9/sigcli-aarch64-apple-darwin.tar.xz"
-      sha256 "2b834a9966b872b303e5929eeb4111f58c7fee375c4174d65c394d22bf2083fc"
+      url "https://assets.sigmacomputing.com/sigcli/releases/v0.0.11/sigcli-aarch64-apple-darwin.tar.xz"
+      sha256 "8ec7620e501d1075d8e3a221239131f97d83152ba5ee3c1a83b603614c0a3d59"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sigmacomputing/cli/releases/download/v0.0.9/sigcli-x86_64-apple-darwin.tar.xz"
-      sha256 "13f96b32eb49205cf882744d1b6b4de0724b109db71e9f3cabeac3174914192c"
+      url "https://assets.sigmacomputing.com/sigcli/releases/v0.0.11/sigcli-x86_64-apple-darwin.tar.xz"
+      sha256 "3f1623212e4666ba54bea8f3ba1807200405acf701f21a842d8a513fc85f31fe"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/sigmacomputing/cli/releases/download/v0.0.9/sigcli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bf428790492998680262c31ae4e078f6f9a71fc163aff2d5cc43bc734f603ce8"
+      url "https://assets.sigmacomputing.com/sigcli/releases/v0.0.11/sigcli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "c007883dc7d307fcd5b31ecc83a1f23bcaa6d85b72d4e431679cca2fc2bc2b07"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sigmacomputing/cli/releases/download/v0.0.9/sigcli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6904f06ddbbc2e4e11652ff3300ed8903fe77a1b09829b02eb342abd800a4db8"
+      url "https://assets.sigmacomputing.com/sigcli/releases/v0.0.11/sigcli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f19419824e88a623669df0150c3f7485db98b13a32ea8f65c20f76454032836f"
     end
   end
   license "Apache-2.0"
