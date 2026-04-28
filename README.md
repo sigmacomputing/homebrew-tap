@@ -1,6 +1,6 @@
 # homebrew-tap
 
-Home for all sigma homebrew releases. 
+Home for all Sigma homebrew releases. 
 
 
 ## sigcli
