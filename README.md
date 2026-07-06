@@ -3,8 +3,8 @@
 Home for all Sigma homebrew releases. 
 
 
-## sigcli
+## Sigma CLI
 
 ```
-brew install sigmacomputing/tap/sigcli
+brew install sigmacomputing/tap/sigma-computing-cli
 ```
