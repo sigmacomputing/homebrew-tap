@@ -1,25 +1,25 @@
 class SigmaComputingCli < Formula
   desc "CLI for the Sigma Computing REST API"
   homepage "https://github.com/sigmacomputing/cli"
-  version "0.2.1"
+  version "1.0.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://assets.sigmacomputing.com/sigma-cli/releases/v0.2.1/sigma-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "3f4a8730184427eb5acb28d75f78500bbc4614eab3edc3ccd0cd97495bce2a45"
+      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.0.0/sigma-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "8fedb1013d956361e0a02da25fe778a234ea855e1d0fb9a46b09f6fe20fb2d52"
     end
     if Hardware::CPU.intel?
-      url "https://assets.sigmacomputing.com/sigma-cli/releases/v0.2.1/sigma-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "ee5bbf65c0585d707cc701f23bab92d938b70dc1803e16cd373376f7aab0c18f"
+      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.0.0/sigma-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "fa3c3439718dc94a7f4e2dfcc3d420ca2094907713fa6491774b32f353cd079f"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://assets.sigmacomputing.com/sigma-cli/releases/v0.2.1/sigma-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bd1d0d314c16c2b02b4e718c6ff0024cb4d453d72c4d479b0f985bf958d2e9b2"
+      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.0.0/sigma-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "43cc41141d901675d00fe7cd06d33e9286136eb8a6da58253acc911833c3f62b"
     end
     if Hardware::CPU.intel?
-      url "https://assets.sigmacomputing.com/sigma-cli/releases/v0.2.1/sigma-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4a400e4da0648b7858d9f7d4b95a18e5510eb7d593ce14cd3228bbae4490992f"
+      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.0.0/sigma-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0fdeb66c509ef3406ccd6f9e2acd230a0ac68d4774e2cb30eba6f8b56065a9a5"
     end
   end
 
@@ -47,10 +47,18 @@ class SigmaComputingCli < Formula
   end
 
   def install
-    bin.install "sigma" if OS.mac? && Hardware::CPU.arm?
-    bin.install "sigma" if OS.mac? && Hardware::CPU.intel?
-    bin.install "sigma" if OS.linux? && Hardware::CPU.arm?
-    bin.install "sigma" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "sigma"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "sigma"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "sigma"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "sigma"
+    end
 
     install_binary_aliases!
 
