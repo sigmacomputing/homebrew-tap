@@ -1,25 +1,25 @@
 class SigmaComputingCli < Formula
   desc "CLI for the Sigma Computing REST API"
   homepage "https://github.com/sigmacomputing/cli"
-  version "1.1.0"
+  version "1.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.1.0/sigma-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "f450cec1eae57474deec1fc9a2970fe98953c7b8f9dc4fb8e93f5c33cd054bf6"
+      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.2.0/sigma-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "529c8b95c31894c8cf9b12c6ea0fc0cb918e0daac3e30300b4b9859411dcf249"
     end
     if Hardware::CPU.intel?
-      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.1.0/sigma-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "094836a2f808d2693e2468cda013b5b0a41117c078b2751732505e617ffc1bcd"
+      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.2.0/sigma-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "b790b0a34ba04cdb9825a4db0f586d8ec40d631062bcbcb96511f3104efe13f2"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.1.0/sigma-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b266ffa25f05ab76d3bc85da22944a662196ebf0f522a79bed76f06b87f44e2c"
+      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.2.0/sigma-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "f46bd24c43ae59719c206ea83daf8fe4acbd3900fa16704e0a42880d83957314"
     end
     if Hardware::CPU.intel?
-      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.1.0/sigma-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "731fa06f4ddc7b892e9a24e800081cb33fcd147f03ea24ba12493fd4e1265111"
+      url "https://assets.sigmacomputing.com/sigma-cli/releases/v1.2.0/sigma-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "0edaf49a9ec939bac488a6f6196677d73d36dc47bad8595b9dfab5a78a963ed1"
     end
   end
 
